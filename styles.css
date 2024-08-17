@@ -1,0 +1,513 @@
+/* Typing Animation Styles */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#typing-effect {
+    overflow: hidden; /* Ensures the text is hidden while typing */
+    border-right: 2px solid #ffa600; /* Cursor effect */
+    white-space: nowrap; /* Prevents text from wrapping */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for effect */
+    font-size: 4rem; /* Adjust size as needed */
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite; /* Typing and blinking effect */
+}
+
+
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+/* Header Styles */
+header.cover {
+    height: 100vh; /* Full viewport height */
+    background: url('path-to-your-image.jpg') no-repeat center center/cover; /* Replace with your image path */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative; /* Ensure header content is positioned correctly */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cover-content {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header.cover h1 {
+    font-size: 4rem; /* Adjust size as needed */
+    margin: 0;
+    background: linear-gradient(45deg, #ffffff, #ffa600); /* Gradient colors */
+    -webkit-background-clip: text; /* For Webkit browsers (Chrome, Safari) */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+    background-clip: text; /* For other browsers */
+    text-fill-color: transparent; /* For Firefox */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2rem; /* Adjust size as needed */
+    margin: 0 15px; /* Spacing between icons */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-icons a:hover {
+    color: #ffa600; /* Change color on hover */
+}
+
+/* Download Button Styles */
+.download-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(45deg, #b1b1b1, #ffa600); /* Gradient background */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.download-button:hover {
+    background: linear-gradient(45deg, #ffa600, #b1b1b1); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Navigation Styles */
+nav {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex;
+    justify-content: flex-end; /* Aligns menu items to the right */
+    position: fixed; /* Fixes the navbar to the top of the page */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 15px; /* Adjust spacing between menu items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Increase font size for better readability */
+    display: inline-block;
+    padding: 10px 0; /* Adjust vertical padding for better click area */
+    position: relative; /* Position relative to allow positioning of the underline */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #ffa600; /* Color of the underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 80px; /* Adjust margin-top to avoid overlap with fixed navbar */
+}
+
+/* Title Styles */
+h2 {
+    color: #ffa600;
+    margin-bottom: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
+/* About Me Section Styles */
+#about {
+    padding: 40px 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 20px 0;
+    color: #acacac;
+    margin-bottom: 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start; /* Align items at the start (top) */
+    flex-wrap: wrap;
+}
+
+.about-col-1, .about-col-2 {
+    flex: 1;
+}
+
+.about-col-1 {
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally if needed */
+    margin-top: 35px;
+}
+
+.about-col-1 img {
+    max-width: 100%;
+    max-height: 400px; /* Adjust this value to control the maximum height */
+    width: auto; /* Maintain aspect ratio */
+    border: 2px solid #ffa600; /* Rectangular frame color */
+    border-radius: 10px;
+}
+
+.about-col-2 {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: #ffa600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.tab-titles {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.tab-links {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #ffffff, #ffa600); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+    transition: background 0.3s ease; /* Smooth transition for background change */
+}
+
+.tab-links.active-link {
+    font-weight: bold;
+    border-bottom: 2px solid #ffa600;
+}
+
+/* Tab Container Styles */
+.tab-container {
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 600px; /* Initial min-height, adjust to the height of the longest tab content */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tab Contents Styles */
+.tab-contents {
+    display: none;
+    margin-top: 20px;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
+.tab-contents ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tab-contents ul li {
+    margin-bottom: 10px;
+}
+
+.tab-contents ul li span {
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffffff, #ffa600); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+    transition: background 0.3s ease; /* Smooth transition for background change */
+}
+
+/* Projects Section Styles */
+#projects {
+
+    padding: 40px 20px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 20px 0;
+    color: #acacac;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between project containers */
+}
+
+.project {
+    flex: 1 1 calc(33.333% - 20px); /* 3 items per row, accounting for gap */
+    box-sizing: border-box;
+    background-color: #000000; /* Background color of the project container */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease; /* Smooth scale effect */
+    margin-bottom: 100px;
+}
+
+/* Pseudo-element for border */
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #ffa600; /* Border color */
+    border-radius: 10px;
+    pointer-events: none; /* Prevent interaction with pseudo-element */
+    opacity: 0; /* Hide border by default */
+    transition: opacity 0.3s ease; /* Smooth border fade effect */
+    box-sizing: border-box; /* Ensure border does not affect the size */
+}
+
+.project img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-title {
+    display: block;
+    font-size: 1.5rem;
+    color: #ffa600;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.project-title:hover {
+    color: #ffffff; /* Change color on hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.tools {
+    margin-bottom: 10px;
+}
+
+.tool {
+    display: inline-block;
+    background: linear-gradient(45deg, #d1c0ab, #ffa600); /* Gradient color */
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+
+.project:hover {
+    transform: scale(1.03); /* Slightly enlarge the project container on hover */
+}
+
+.project:hover::before {
+    opacity: 1; /* Show border on hover */
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    color: #ffa600;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 20px); /* 2 items in a row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex: 1 1 100%; /* 1 item in a row on small screens */
+    }
+}
+
+
+/* Contact Section Styles */
+#contact {
+    padding: 40px 20px;
+    background-color: #000000; /* Darker background for better contrast */
+    border-radius: 8px; /* Slightly larger border radius for a softer look */
+    margin: 20px auto; /* Center the section horizontally */
+    max-width: 800px; /* Limit the width of the contact section */
+    color: #dcdcdc; /* Light text color for better readability */
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 250px;
+    margin-top: 100px;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #ffa600;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Larger font size for the heading */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Adequate spacing between form elements */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffa600;
+    font-weight: bold; /* Make label text bold */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Slightly more padding for better user experience */
+    background-color: #2c2c2c; /* Darker input fields for better contrast */
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+}
+
+.form-group input:hover,
+.form-group textarea:hover,
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ffa600;
+    box-shadow: 0 0 8px rgba(255, 166, 0, 0.7); /* Slightly more intense glow effect */
+    outline: none; /* Remove default outline */
+}
+
+button[type="submit"] {
+    color: #fff;
+    padding: 12px 24px; /* More padding for a button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, #b1b1b1, #ffa600); /* Gradient background */
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(45deg, #ffa600, #b1b1b1); /* Gradient background */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Contact Information Styles */
+.contact-info {
+    margin-top: 80px;
+    text-align:center;
+    font-size: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.info-item i {
+    color: #ffa600;
+    margin-right: 10px;
+}
+
+.info-item span {
+    color: #acacac;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem; /* Ensure readability on smaller screens */
+    }
+
+    button[type="submit"] {
+        width: 100%; /* Full-width button on small screens */
+        padding: 12px; /* Increase button padding on smaller screens */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #000000;
+    color: white;
+    margin-top: 50px; /* Space above footer */
+}

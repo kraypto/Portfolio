@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Codrey Delos Reyes</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <link rel="icon" href="images/codreylogo.png" type="image/png">
+
+<!-- Include EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      // Initialize EmailJS with your public key
+      emailjs.init("2VNxWS38VTCDd6oUm"); // Replace this with your actual public key
+   })();
+</script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="cover" id="home">
+        <div class="cover-content">
+            <h1 id="typing-effect">Hi, I'm Jan Codrey Delos Reyes</h1>
+            <div class="social-icons">
+                <a href="https://github.com/kraypto" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/jan-codrey-delos-reyes-6b258b314" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://facebook.com/cdrxking" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <a href="images/DelosReyes_Resume.pdf" class="download-button" download>Download CV</a> <!-- Replace with your CV path -->
+        </div>
+    </header>
+    
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/img.png" alt="Profile Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I’m Jan Codrey M. Delos Reyes, a BSIT student at Bulacan State University. I’m passionate about cloud computing and excited about the endless possibilities it offers. My journey in tech has been all about learning and growing, I’m currently diving deep into AWS and expanding my skill set in this dynamic field.</p>
+    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+    
+                    <div class="tab-container">
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Cloud Computing</span><br>Amazon Web Services</li>
+                                <li><span>Web Design and Development</span><br>HTML, CSS, PHP, Javascript</li>
+                                <li><span>Scripting Frameworks</span><br>Python</li>
+                                <li><span>UI/UX Design</span><br>Figma</li>
+                                <li><span>Android App Development</span><br>Android Studio</li>
+                                <li><span>Photography</span><br>Adobe Photoshop, Adobe Lightroom, Canva</li>
+                                <li><span>MS Office</span><br>Word, Excel, Powerpoint</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="certifications">
+                            <ul>
+                                <li><span>2020-2021</span><br>Training 1</li>
+                                <li><span>2021-2022</span><br>Training 2</li>
+                                <li><span>2022-2023</span><br>Training 3</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Bulacan State University, 2021-2025</span><br>Bachelor of Science in Information Technology</li>
+                                <li><span>Our Lady of Fatima University, 2019-2021</span><br>Senior High School – STEM Strand</li>
+                                <li><span>A.F.G.B. Memorial Trade School, 2015-2019</span><br>Junior High School</li>
+                                <li><span>Lias Elementary School, 2009-2015</span><br>Elementary School</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <img src="images/proj1.png">
+                    <div class="project-info">
+                        <a href="https://github.com/example/project1" class="project-title" target="_blank">G&F AutoSupply Website Design</a>
+                        <div class="tools">
+                            <span class="tool">Figma</span>
+                        </div>
+                        <p>Developed a detailed website design prototype using Figma. This project included designing both the user interface and the admin dashboard, providing a clear and functional representation of the website’s layout and features. The prototype aimed to improve user experience and streamline administrative tasks.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/proj2.png">
+                    <div class="project-info">
+                        <a href="https://github.com/example/project2" class="project-title" target="_blank">Host a Website on Amazon S3</a>
+                        <div class="tools">
+                            <span class="tool">Amazon S3</span>
+                            <span class="tool">HTML</span>
+                            <span class="tool">CSS</span>
+                            <span class="tool">JS</span>
+                        </div>
+                        <p>Developed and deployed a static website using Amazon S3. This project involved leveraging cloud storage to host and serve the website, ensuring it was accessible to users through a public URL. It demonstrated my capability to utilize cloud-based solutions for efficient web hosting and content delivery.</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="images/proj3.png">
+                    <div class="project-info">
+                        <a href="https://github.com/example/project3" class="project-title" target="_blank">2D Platformer Game</a>
+                        <div class="tools">
+                            <span class="tool">Unity</span>
+                            <span class="tool">C#</span>
+                            <span class="tool">Aesprite</span>
+                        </div>
+                        <p>Developed a 2D platformer game using Unity, designed to provide an engaging and enjoyable experience across both PC and mobile platforms. The game features classic platforming elements, including character movement and obstacle navigation, offering players a immersive gaming experience. </p>
+                    </div>
+                </div>
+                
+                <!-- Add more project containers here -->
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Me</h2>
+        
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+            </div>
+    
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fa fa-envelope"></i>
+                <span>jancodrey.delosreyes@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <i class="fa fa-phone"></i>
+                <span>(+63) 970-3031-945</span>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+
+    
+
+    <footer>
+        <p>&copy; 2024 Jan Codrey Delos Reyes</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
